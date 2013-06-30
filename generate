@@ -32,7 +32,7 @@ generate_question_mp3() {
 	# concat_audio_files
 	final_file=./audio/$name
 	echo "- Combining files"
-	cat  $mp3_file $blank_file | ffmpeg -y -i pipe:0 $final_file.mp3  2>/dev/null
+	cat  $mp3_file $blank_file | ffmpeg -y -i pipe:0 -metadata artist="RoboPal" $final_file.mp3  2>/dev/null
 
 	# cleanup
 	echo "- Cleaning up"
