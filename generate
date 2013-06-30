@@ -1,0 +1,66 @@
+#!/bin/bash
+set -e
+# set -o xtrace
+
+# First arg is length of response time
+# Remaining args is the question text
+generate_question_mp3() {
+	mkdir -p tmp audio
+
+	response_length="$1"
+	question="${@:2}"
+	# [[ $response_length =~ ^-?[0-9]+$ ]]
+	# return
+
+	# Turn spaces into '-', lowercase everything, remove non alpha or "-" characters.
+	# "Hey hows it going man?" => hey-hows-it-going-man.wav
+	name=`echo "$question" | tr " "[:upper:] -[:lower:] | tr -Cd [:alpha:]-`
+
+	# Generate mp3 file of text to speech
+	voice=Bruce
+	aiff_file=./tmp/$name.aiff
+	mp3_file=./tmp/$name.mp3
+	echo "- Making question mp3 file: $mp3_file"
+	say -v $voice -o $aiff_file "$question"
+	ffmpeg -y -i $aiff_file -ac 1 -ar 22050 $mp3_file 2>/dev/null
+
+	# Generate blank file
+	blank_file=./tmp/$response_length.mp3
+	echo "- Blank file: $blank_file"
+	ffmpeg -y -f lavfi -i aevalsrc=0 -t $response_length $blank_file  2>/dev/null
+
+	# concat_audio_files
+	final_file=./audio/$name
+	echo "- Combining files"
+	cat  $mp3_file $blank_file | ffmpeg -y -i pipe:0 $final_file.mp3  2>/dev/null
+
+	# cleanup
+	echo "- Cleaning up"
+	# rm ./tmp/*
+}
+
+generate_audio_from_file() {
+	# Aughh, -100 ffmpeg. It shifts from stdin, eating the first parameter in lines after line one,
+	# causing it to swallow the number (only when it was larger than 13!)
+	# Below we use this trick to read on a separate FD.
+	# http://mywiki.wooledge.org/BashFAQ/089
+	while read <&3 line; do
+		# Line must start with a digit, have a space, then other content
+		if [[ $line =~ ^[0-9]+\ .+$ ]]; then
+			generate_question_mp3 $line
+		else
+			echo 'skip', $line
+		fi
+	done 3< "$1"
+}
+
+
+# Couldn't get concat filter working.  Can't pipe aiff files to ffmpeg
+# ffmpeg -y -i "concat:hey-there-guys.aiff|30.aiff" -t 30 xx.aiff
+
+# generate_blank_audio_file 30
+# generate_blank_audio_file 60
+# combine_question_and_blank_audio_file
+# generate_question_mp3 30 "Hey there guys?"
+
+generate_audio_from_file "questions.txt"

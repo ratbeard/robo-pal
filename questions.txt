@@ -1,0 +1,4 @@
+# hi
+
+30 What is a closure in javascript?
+60 How did you resolve a conflict at work?
