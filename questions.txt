@@ -1,4 +1,23 @@
-# hi
+# https://github.com/darcyclarke/Front-end-Developer-Interview-Questions
+20 What did you learn yesterday/this week?
+30 What excites or interests you about coding?
+30 Name 3 ways to decrease page load. (perceived or actual load time)
+20 If you could master one technology this year, what would it be?
+30 Explain the importance of standards and standards bodies.
+15 Describe the difference between cookies, sessionStorage and localStorage.
+15 Explain event delegation
+20 Explain how this works in JavaScript
+30 Explain how prototypal inheritance works
+20 How do you go about testing your JavaScript?
+20  What is a closure, and how/why would you use one?
+20 How do you organize your js code?
+15 What's the difference between .call and .apply?
+20 Explain AJAX in as much detail as possible
+15 Explain "hoisting".
+15 What's the difference between an "attribute" and a "property"?
+20 Explain the same-origin policy with regards to JavaScript.
+20 What's the coolest thing you've ever coded, what are you most proud of?
+20 What are your favorite parts about the developer tools you use?
+20 Do you have any pet projects? What kind?
+20 What's your favorite feature of Internet Explorer?
 
-30 What is a closure in javascript?
-60 How did you resolve a conflict at work?
