@@ -8,7 +8,7 @@ generate_question_mp3() {
 	mkdir -p tmp audio
 
 	response_length="$1"
-	question="${@:2}"
+	question="$@"
 	# [[ $response_length =~ ^-?[0-9]+$ ]]
 	# return
 
