@@ -1,23 +1,63 @@
+# Misc programming
+60 Who are your programming heroes?
+60 What are some bad parts of css?
+60 What are some bad parts of javascript?
+60 What are some bad parts of ruby?
+40 Whats a feature you wish every browser instantly had?
+40 What is an example of something you've automated?
+60 How can you use caching in rails?
+60 Explain REST.
+30 What is an overblown technology in your opinion?
+60 What do you think will be some big software areas in the next five years?
+40 Explain any algorithm.
+40 Explain any data structure.
+15 What does SOLID stand for?
+30 Explain Domain Driven Design?
+30 What is the difference between TDD and BDD?
+60 When would you use, and not use, TDD?
+60 Explain your approach to testing.
+30 Whats your favorite language?
+30 Whats your least favorite language?
+30 What databases do you have experience with?
+
+# Interview behavioral
+30 When was a time you had a conflict?
+30 Whats your greatest weakness?
+
+
+# Fact quiz
+
+30 What
+
+# Opinion quiz
+60 What is harmful about EME?
+
+# Chit chat
+30 How is your day going?
+30 What do you like to do outside work?
+20 Tell a joke.
+30 What kind of beer do you like?
+
 # https://github.com/darcyclarke/Front-end-Developer-Interview-Questions
-20 What did you learn yesterday/this week?
+30 What did you learn this week?
 30 What excites or interests you about coding?
-30 Name 3 ways to decrease page load. (perceived or actual load time)
-20 If you could master one technology this year, what would it be?
-30 Explain the importance of standards and standards bodies.
-15 Describe the difference between cookies, sessionStorage and localStorage.
-15 Explain event delegation
-20 Explain how this works in JavaScript
-30 Explain how prototypal inheritance works
-20 How do you go about testing your JavaScript?
-20  What is a closure, and how/why would you use one?
-20 How do you organize your js code?
-15 What's the difference between .call and .apply?
-20 Explain AJAX in as much detail as possible
-15 Explain "hoisting".
-15 What's the difference between an "attribute" and a "property"?
-20 Explain the same-origin policy with regards to JavaScript.
-20 What's the coolest thing you've ever coded, what are you most proud of?
-20 What are your favorite parts about the developer tools you use?
-20 Do you have any pet projects? What kind?
-20 What's your favorite feature of Internet Explorer?
+40 Name 3 ways to decrease page load.
+30 If you could master one technology this year, what would it be?
+60 Explain the importance of standards and standards bodies.
+30 Describe the difference between cookies, sessionStorage and localStorage.
+20 Explain event delegation
+40 Explain how this works in JavaScript
+40 Explain how prototypal inheritance works
+30 How do you go about testing your JavaScript?
+30  What is a closure, and why would you use one?
+60 How do you organize your js code?
+30 What's the difference between .call and .apply?
+40 Explain AJAX in as much detail as possible
+20 Explain "hoisting".
+20 What's the difference between an "attribute" and a "property"?
+30 Explain the same-origin policy with regards to JavaScript.
+30 What's the coolest thing you've ever coded, what are you most proud of?
+30 What are your favorite parts about the developer tools you use?
+30 Do you have any pet projects? What kind?
+30 What's your favorite feature of Internet Explorer?
 
